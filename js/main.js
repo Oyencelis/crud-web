@@ -311,13 +311,13 @@ function animateContent() {
         ease: 'power2.out'
     });
 
-    // Animate stat cards
+    // Animate stat cards - modified to preserve visibility
     gsap.from('.stat-card', {
         y: 30,
-        opacity: 0,
         duration: 0.5,
         stagger: 0.1,
-        ease: 'power2.out'
+        ease: 'power2.out',
+        clearProps: 'all' // This ensures all animated properties are cleared after animation
     });
 
     // Animate numbers
